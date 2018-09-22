@@ -10,6 +10,7 @@ jobs:
       - checkout
       - run:
           name: Gradle Build
+          command: sudo chmod +x ./*/gradlew
           command: ./*/gradlew build
       - restore_cache:
           key: jars-{{checksum "./AndroidDemo/build.gradle"}}-{{checksum "./AndroidDemo/app/build.gradle"}}
