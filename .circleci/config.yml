@@ -22,7 +22,7 @@ jobs:
           key: jars-{{checksum "./AndroidDemo/build.gradle"}}-{{checksum "./AndroidDemo/app/build.gradle"}}
       - run:
           name: Run Tests
-          command: ./*/gradlew :./*/app:connectedAndroidTest
+          command: ./*/gradlew :androidTest:connectedAndroidTest
       - store_artifacts:
           path: app/build/reports
           destination: reports
