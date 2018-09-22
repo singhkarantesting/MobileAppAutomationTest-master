@@ -20,7 +20,7 @@ jobs:
           paths:
           - ./*/.gradle
           key: jars-{{checksum "./AndroidDemo/build.gradle"}}-{{checksum "./AndroidDemo/app/build.gradle"}} 
-      - run: cd /AndroidDemo
+      - run: cd AndroidDemo
       - run:
           name: Run Tests        
           command: gradlew connectedAndroidTest
