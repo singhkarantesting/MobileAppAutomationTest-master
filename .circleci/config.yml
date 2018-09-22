@@ -20,7 +20,7 @@ jobs:
           paths:
           - ./*/.gradle
           key: jars-{{checksum "./AndroidDemo/build.gradle"}}-{{checksum "./AndroidDemo/app/build.gradle"}}       
-           - run:
+      - run:
           name: Setup emulator
           command: sdkmanager "system-images;android-16;default;armeabi-v7a" && echo "no" | avdmanager create avd -n test -k "system-images;android-16;default;armeabi-v7a"
       - run:
