@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Run Tests        
           working_directory: ./AndroidDemo
-          command: ./*/gradlew connectedAndroidTest
+          command: gradlew connectedAndroidTest
       - store_artifacts:
           path: app/build/reports
           destination: reports
