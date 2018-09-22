@@ -19,11 +19,11 @@ jobs:
       - save_cache:
           paths:
           - ./*/.gradle
-          key: jars-{{checksum "./AndroidDemo/build.gradle"}}-{{checksum "./AndroidDemo/app/build.gradle"}} 
-      - run: cd AndroidDemo
+          key: jars-{{checksum "./AndroidDemo/build.gradle"}}-{{checksum "./AndroidDemo/app/build.gradle"}}       
       - run:
           name: Run Tests        
-          command: gradlew connectedAndroidTest
+          working_directory: ./AndroidDemo
+          command: ./*/gradlew connectedAndroidTest
       - store_artifacts:
           path: app/build/reports
           destination: reports
